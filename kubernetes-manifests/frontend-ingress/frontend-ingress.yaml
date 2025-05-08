@@ -10,7 +10,6 @@ metadata:
 spec:
   ingressClassName: alb
   rules:
-    - host: www.dovz.shop
       http:
         paths:
           - path: /
