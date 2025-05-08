@@ -1,5 +1,3 @@
-
-
 # AWS EC2 instance resource definition
 resource "aws_instance" "ec2" {
   # Use the dynamically retrieved AMI ID from the AWS AMI data source
