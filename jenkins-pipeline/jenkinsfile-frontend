@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Checkout from Git') {
             steps {
-                git branch: 'main', credentialsId: 'GITHUB', url: 'https://github.com/codewithmuh/three-tier-devsecops-project.git'
+                git branch: 'main', credentialsId: 'GITHUB', url: 'https://github.com/sanjaykadavarath/Sanjay-SRE.git'
             }
         }
         stage('Sonarqube Analysis') {
@@ -86,7 +86,7 @@ pipeline {
         }
         stage('Checkout Code') {
             steps {
-                git branch: 'main', credentialsId: 'GITHUB', url: 'https://github.com/codewithmuh/three-tier-devsecops-project.git'
+                git branch: 'main', credentialsId: 'GITHUB', url: 'https://github.com/sanjaykadavarath/Sanjay-SRE.git'
             }
         }
         stage('Update Deployment file') {
@@ -103,8 +103,8 @@ pipeline {
                             ls -l
                         '''
                         sh '''
-                            git config user.email "rashiddaha80@gmail.com"
-                            git config user.name "codewithmuh"
+                            git config user.email "sanjaykadavarath@gmail.com"
+                            git config user.name "sanjaykadavarath"
                             BUILD_NUMBER=${BUILD_NUMBER}
                             echo $BUILD_NUMBER
                             imageTag=$(grep -oP '(?<=frontend:)[^ ]+' deployment.yaml)
